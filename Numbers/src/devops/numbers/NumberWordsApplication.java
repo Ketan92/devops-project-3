@@ -19,6 +19,13 @@ public final class NumberWordsApplication {
 				System.out.print( "Enter number (0 to exit): " ) ;
 				String value = reader.readLine() ;
 				int number = Integer.parseInt( value ) ;
+				if(number == 0)
+				{
+					System.out.println( "Application Disconnected" ) ;
+					System.exit(0);
+				}
+				String convertedValue = numberWords.toWords(number);
+				System.out.println(convertedValue);
 			} catch ( NumberFormatException | IOException e ) {
 				System.out.println( "Invalid number" ) ;
 			}
